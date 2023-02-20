@@ -66,15 +66,15 @@ model VerificationToken {
 }
 
 enum Matchup {
-    ZvZ
-    ZvT
-    ZvP
-    TvZ
-    TvT
-    TvP
-    PvZ
-    PvT
-    PvP
+    zvz
+    zvt
+    zvp
+    tvz
+    tvt
+    tvp
+    pvz
+    pvt
+    pvp
 }
 
 model BuildOrder {

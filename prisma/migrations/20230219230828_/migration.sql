@@ -1,3 +1,6 @@
+-- CreateEnum
+CREATE TYPE "Matchup" AS ENUM ('zvz', 'zvt', 'zvp', 'tvz', 'tvt', 'tvp', 'pvz', 'pvt', 'pvp');
+
 -- CreateTable
 CREATE TABLE "Example" (
     "id" TEXT NOT NULL,
@@ -51,6 +54,15 @@ CREATE TABLE "VerificationToken" (
     "identifier" TEXT NOT NULL,
     "token" TEXT NOT NULL,
     "expires" TIMESTAMP(3) NOT NULL
+);
+
+-- CreateTable
+CREATE TABLE "BuildOrder" (
+    "id" TEXT NOT NULL,
+    "matchup" "Matchup" NOT NULL,
+    "build" TEXT NOT NULL,
+
+    CONSTRAINT "BuildOrder_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
